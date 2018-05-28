@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./App.css";
 import { posts } from "./posts";
+import "./Home.css";
 
-class App extends React.Component {
+class Home extends React.Component {
   constructor(props) {
     super(props);
 
@@ -34,4 +34,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default Home;

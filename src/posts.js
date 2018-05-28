@@ -2,7 +2,6 @@ export const posts = [
   {
     id: 22,
     title: "Welcome to React",
-    // headline: "A JavaScript library for building user interfaces",
     body: `React makes it painless to create interactive UIs.
       Design simple views for each state in your application,
       and React will efficiently update and render just the right components when your data changes.
@@ -11,18 +10,14 @@ export const posts = [
   {
     id: 23,
     title: "An Introduction to React Router",
-    // headline: "Declarative routing for React",
     body: `There are three types of components in React Router: router components, route matching components, and navigation components.
       All of the components that you use in a web application should be imported from react-router-dom.`,
-    url: "/posts/23"
   },
   {
     id: 24,
     title: "Welcome to Redux",
-    // headline: "a predictable state container for JavaScript apps.",
     body: `It helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test.
       On top of that, it provides a great developer experience, such as live code editing combined with a time traveling debugger.`,
-    url: "/posts/24"
   }
 ];
 

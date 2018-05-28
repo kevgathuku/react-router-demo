@@ -2,17 +2,18 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./index.css";
-import App from "./App";
+import Home from "./Home";
 import PostDetails from "./PostDetails";
 import registerServiceWorker from "./registerServiceWorker";
 
-ReactDOM.render(
+const App = () => (
   <Router>
     <Switch>
-      <Route exact path="/" component={App} />
+      <Route exact path="/" component={Home} />
       <Route path="/posts/:postId" component={PostDetails} />
     </Switch>
-  </Router>,
-  document.getElementById("root")
+  </Router>
 );
+
+ReactDOM.render(<App />, document.getElementById("root"));
 registerServiceWorker();
