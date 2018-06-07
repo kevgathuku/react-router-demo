@@ -11,8 +11,7 @@ class PostDetails extends Component {
         id: "",
         title: "",
         body: ""
-      },
-      recommendedPosts: recommendedPosts
+      }
     };
   }
 
@@ -24,7 +23,7 @@ class PostDetails extends Component {
     } = this.props;
     const prevPostId = prevProps.match.params.postId;
     if (prevPostId !== postId) {
-      this.fetchPostData();
+      this.fetchPostData(postId);
     }
   }
 
@@ -37,29 +36,21 @@ class PostDetails extends Component {
     this.fetchPostData(postId);
   }
 
-  fetchPostData = () => {
-    const {
-      match: {
-        params: { postId }
-      }
-    } = this.props;
+  fetchPostData = postId => {
     const post = allPosts.find(post => post.id == postId);
-    console.log("postId", postId);
-    console.log("post", post);
     this.setState({
       postDetails: post
     });
   };
 
   render() {
-    const { recommendedPosts } = this.state;
     return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">{this.state.postDetails.title}</h1>
         </header>
         <p className="lead">{this.state.postDetails.body}</p>
-        <div>
+        <section>
           <h4>Recommended Posts</h4>
           {recommendedPosts.map(post => (
             <div key={post.id}>
@@ -68,7 +59,7 @@ class PostDetails extends Component {
               </Link>
             </div>
           ))}
-        </div>
+        </section>
       </div>
     );
   }
