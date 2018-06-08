@@ -15,18 +15,6 @@ class PostDetails extends Component {
     };
   }
 
-  componentDidUpdate(prevProps) {
-    const {
-      match: {
-        params: { postId }
-      }
-    } = this.props;
-    const prevPostId = prevProps.match.params.postId;
-    if (prevPostId !== postId) {
-      this.fetchPostData(postId);
-    }
-  }
-
   componentDidMount() {
     const {
       match: {
